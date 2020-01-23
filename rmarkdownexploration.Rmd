@@ -1,0 +1,50 @@
+---
+title: "Rmarkdownexploration"
+date: Last updated `r format(Sys.time(), "%d %B, %Y")`
+output: 
+  html_document:
+      theme: cerulean
+      toc: TRUE
+---
+# Packages needed for this analysis
+
+```{r}
+#install.packages('gapminder')
+# install.packages('DT')
+# install.packages('tibble')
+```
+
+```{r}
+library(gapminder)
+library(DT)
+library(tibble)
+```
+
+# Mtcars
+mtcars is a data set that describes the features of automobiles from an old magazine. The table is complete with 7 variables.
+
+```{r gapminder view,echo=FALSE}
+mtcars
+```
+
+
+
+```{r}
+mtcars
+mean(mtcars["mpg"])
+
+mtcars["mpg"]
+mtcars[["mpg"]]
+mtcars$mpg
+
+mean(mtcars$mpg)
+```
+
+```{r}
+unique(mtcars$cyl)
+```
+
+
+
+
+
